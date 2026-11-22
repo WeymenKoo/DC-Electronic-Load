@@ -27,7 +27,7 @@ Nothing here is built yet.
 | **P8** loop stable, ≤ 1.5 % overshoot | Keep per-FET loops; re-check compensation for the larger MOSFETs |
 | **C1 / C2** fan never turns on; MCU cannot read temperature | Fan driven from the MCU; over-temperature comparator in hardware |
 | **C5** DAC powers up at its EEPROM value (found 2048 ≈ 5.6 A) | DAC with volatile registers (powers up at 0) plus the hardware OFF line |
-| **N1** +5 V back-fed from USB | Single, isolated power tree from USB-C |
+| **N1** +5 V back-fed from USB | Single power tree from USB-C, with no back-feed path |
 | **N3** 5 mA at code 0 | Small deliberate offset so code 0 is truly 0 A |
 | **N4** 4.096 V reference 3 mV low on USB power | DAC/ADC with their own references, supplied from a regulated rail |
 | Hot plug from a stiff source (untested) | Covered by the dropout anti-wind-up; test with a battery on Rev B |
