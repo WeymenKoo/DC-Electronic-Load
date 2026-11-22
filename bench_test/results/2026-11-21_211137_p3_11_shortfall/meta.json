@@ -1,0 +1,35 @@
+{
+  "test": "p3_11_shortfall",
+  "started": "2026-11-21T21:11:37",
+  "git": "32d880e",
+  "probe_map_name": null,
+  "probe_map": null,
+  "instruments": {
+    "load": "REVB-ELOAD-TEST,0.1.0,Nov 21 2026 05:09:48",
+    "psu": "KORAD KA3005P V1.5 SN:01639604",
+    "scope": null,
+    "ports": {
+      "load": "COM4",
+      "psu": "COM3"
+    }
+  },
+  "session": {
+    "ambient_C": 20.0,
+    "fuse": "10 A blade (schematic: 5 A)",
+    "fan": "none",
+    "heatsink": "isolated from DRAIN, shorted to GND",
+    "ntc": "NTCLE100E3103HT1 on power-board TEMP_IN+ (R19 470R from +12V), epoxy bead on heatsink ~1 mm from one FET; not read by the MCU"
+  },
+  "board_cfg": {
+    "vdda": 3.311,
+    "vref_dmm": 4.093,
+    "isen_v_per_a": 0.25,
+    "isen_zero_counts": 0.0,
+    "ma_per_code": 2.7273,
+    "ntc_installed": false
+  },
+  "note": "DMM mV source-path survey; scope packed away",
+  "code": 393,
+  "vpsu": 3.0,
+  "scope": false
+}

@@ -1,0 +1,3 @@
+timestamp,phase,step,note,psu_vout,psu_iout,psu_mode,dac_fw,isen_raw,isen_A,vsen_raw,vrefint_raw,vdda_est,tmcu_raw,flags,ch1_vavg,ch1_vmax,ch1_vmin,ch1_vpp,ch2_vavg,ch2_vmax,ch2_vmin,ch2_vpp,ch3_vavg,ch3_vmax,ch3_vmin,ch3_vpp,ch4_vavg,ch4_vmax,ch4_vmin,ch4_vpp
+1795306961.26463,1,usb_only,"DC, 20 MHz BW",,,,0,0.64,0.002063003663003663,4095.0,1492.02,3.29352153456388,1767.03,D00,3.1707,3.204,3.1289,0.075067,4.0813,4.1165,4.0471,0.069467,5.1011,5.1479,5.0553,0.092533,nan,nan,nan,nan
+1795306963.5956352,1,usb_only_ripple,"full BW, 20 mV/div",,,,,,,,,,,,,,,,,,,,,,,,,,,

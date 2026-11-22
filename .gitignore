@@ -1,0 +1,17 @@
+# Not published: unbuilt designs, reference material, working notes
+_unpublished/
+
+# Build output, caches
+firmware/build/
+firmware/build-bench/
+__pycache__/
+*.pyc
+
+# Altium scratch
+*.Cam
+*.PcbDoc.htm
+*.SchDoc.htm
+History/
+__Previews/
+*.SchDocPreview
+*.PcbDocPreview

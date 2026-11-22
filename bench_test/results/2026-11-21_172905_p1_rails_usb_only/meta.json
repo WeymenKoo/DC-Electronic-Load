@@ -1,0 +1,84 @@
+{
+  "test": "p1_rails_usb_only",
+  "started": "2026-11-21T17:29:05",
+  "git": "32d880e",
+  "probe_map_name": "rails",
+  "probe_map": {
+    "ch1": {
+      "location": "CTL TP4",
+      "net": "+3V3"
+    },
+    "ch2": {
+      "location": "CTL J10",
+      "net": "+4.096V"
+    },
+    "ch3": {
+      "location": "CTL TP1",
+      "net": "+5USB"
+    },
+    "ch4": {
+      "location": "CTL TP3",
+      "net": "+5V (TPS5430 out)"
+    }
+  },
+  "instruments": {
+    "load": "REVB-ELOAD-TEST,0.1.0,Nov 21 2026 05:09:48",
+    "psu": null,
+    "scope": "RIGOL TECHNOLOGIES,DHO804,DHO8A285M01767,00.01.05",
+    "ports": {
+      "load": "COM4",
+      "scope": "USB0::0x1AB1::0x044D::DHO8A285M01767::INSTR"
+    }
+  },
+  "session": {
+    "ambient_C": 20.0,
+    "fuse": "10 A blade (schematic: 5 A)",
+    "fan": "none",
+    "heatsink": "isolated from DRAIN, shorted to GND",
+    "ntc": "NTCLE100E3103HT1 on power-board TEMP_IN+ (R19 470R from +12V), epoxy bead on heatsink ~1 mm from one FET; not read by the MCU"
+  },
+  "board_cfg": {
+    "vdda": 3.3,
+    "isen_v_per_a": 0.25,
+    "isen_zero_counts": 0.0,
+    "ma_per_code": 2.7273,
+    "ntc_installed": false
+  },
+  "note": "",
+  "power_state": "usb_only",
+  "dmm": {
+    "+3V3": "3.311",
+    "+4.096V": "4.093"
+  },
+  "result": {
+    "dc": {
+      "ch1_vavg": 3.0827,
+      "ch1_vmax": 3.1251,
+      "ch1_vmin": 3.0328,
+      "ch1_vpp": 0.092267,
+      "ch2_vavg": 4.0725,
+      "ch2_vmax": 4.1216,
+      "ch2_vmin": 4.0173,
+      "ch2_vpp": 0.10933,
+      "ch3_vavg": 5.0728,
+      "ch3_vmax": 5.1368,
+      "ch3_vmin": 5.0115,
+      "ch3_vpp": 0.1152,
+      "ch4_vavg": 4.1187,
+      "ch4_vmax": 4.1776,
+      "ch4_vmin": 4.0651,
+      "ch4_vpp": 0.14693
+    },
+    "ripple": {
+      "ch1_vpp_fullbw": 0.033037,
+      "ch1_vrms_fullbw": 0.030269,
+      "ch2_vpp_fullbw": 0.028331,
+      "ch2_vrms_fullbw": 0.024748,
+      "ch3_vpp_fullbw": 0.045885,
+      "ch3_vrms_fullbw": 0.036133,
+      "ch4_vpp_fullbw": 0.027267,
+      "ch4_vrms_fullbw": 0.028238
+    }
+  },
+  "finished": "2026-11-21T17:29:13"
+}

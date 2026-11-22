@@ -1,0 +1,11 @@
+{
+  "loadctrl_slope_mV_per_code": 1.0033678196456888,
+  "loadctrl_intercept_mV": -109.16246235624745,
+  "ctrlv_slope_mV_per_code": 0.15100660230948135,
+  "ctrlv_intercept_mV": 1.445466747652292,
+  "divider_ratio_vs_ch1": 0.15049974630719679,
+  "divider_ratio_vs_ideal_lsb": 0.15111728391391047,
+  "gate1_ceiling_V": 4.0937623556250005,
+  "gate2_ceiling_V": 4.094050167499999,
+  "ideal_lsb_mV": 0.999267578125
+}

@@ -1,0 +1,92 @@
+{
+  "test": "p3_5_step_12V",
+  "started": "2026-11-21T18:21:24",
+  "git": "32d880e",
+  "probe_map_name": "fets",
+  "probe_map": {
+    "ch1": {
+      "location": "PWR J4",
+      "net": "Source2"
+    },
+    "ch2": {
+      "location": "PWR J5",
+      "net": "Source1"
+    },
+    "ch3": {
+      "location": "PWR J2",
+      "net": "Gate1"
+    },
+    "ch4": {
+      "location": "PWR J1",
+      "net": "Gate2"
+    }
+  },
+  "instruments": {
+    "load": "REVB-ELOAD-TEST,0.1.0,Nov 21 2026 05:09:48",
+    "psu": "KORAD KA3005P V1.5 SN:01639604",
+    "scope": "RIGOL TECHNOLOGIES,DHO804,DHO8A285M01767,00.01.05",
+    "ports": {
+      "load": "COM4",
+      "psu": "COM3",
+      "scope": "USB0::0x1AB1::0x044D::DHO8A285M01767::INSTR"
+    }
+  },
+  "session": {
+    "ambient_C": 20.0,
+    "fuse": "10 A blade (schematic: 5 A)",
+    "fan": "none",
+    "heatsink": "isolated from DRAIN, shorted to GND",
+    "ntc": "NTCLE100E3103HT1 on power-board TEMP_IN+ (R19 470R from +12V), epoxy bead on heatsink ~1 mm from one FET; not read by the MCU"
+  },
+  "board_cfg": {
+    "vdda": 3.311,
+    "vref_dmm": 4.093,
+    "isen_v_per_a": 0.25,
+    "isen_zero_counts": 0.0,
+    "ma_per_code": 2.7273,
+    "ntc_installed": false
+  },
+  "note": "USB-C only; TC taped on Q2 package top",
+  "vpsu": 12.0,
+  "ilim": 2.0,
+  "code_a": 184,
+  "code_b": 551,
+  "half_ms": 50,
+  "timebases": [
+    2e-05,
+    0.0002
+  ],
+  "levels": {
+    "a": {
+      "ch1_vavg": 0.01228,
+      "ch2_vavg": 0.029907,
+      "ch3_vavg": 3.4704,
+      "ch4_vavg": 3.4571
+    },
+    "b": {
+      "ch1_vavg": 0.06924,
+      "ch2_vavg": 0.086693,
+      "ch3_vavg": 3.8448,
+      "ch4_vavg": 3.8411
+    }
+  },
+  "captures": {
+    "rise_20us": {
+      "gate1_pp_V": 0.4409889749999998,
+      "points": 10000
+    },
+    "fall_20us": {
+      "gate1_pp_V": 0.4403623240000001,
+      "points": 10000
+    },
+    "rise_200us": {
+      "gate1_pp_V": 0.4402823259999997,
+      "points": 10000
+    },
+    "fall_200us": {
+      "gate1_pp_V": 0.4404023229999998,
+      "points": 10000
+    }
+  },
+  "finished": "2026-11-21T18:21:51"
+}

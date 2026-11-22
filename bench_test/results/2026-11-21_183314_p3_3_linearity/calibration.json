@@ -1,0 +1,17 @@
+{
+  "gain_low_mA_per_code": 2.701298701298701,
+  "offset_low_mA": 4.831168831168839,
+  "gain_high_mA_per_code": 2.500348717948717,
+  "offset_high_mA": 18.03794871794892,
+  "line_all_mA_per_code": 2.5161172584827494,
+  "line_all_offset_mA": 10.490489777071021,
+  "quad_coeffs_A_per_code": [
+    -7.34997851162091e-08,
+    0.002560364579666764,
+    0.008169045553602556
+  ],
+  "isen_counts_per_A": 311.03250679291733,
+  "isen_zero_counts": -0.6078094511107086,
+  "zero_code_current_mA": 5.0,
+  "max_residual_vs_line_mA": 6.772570714995707
+}

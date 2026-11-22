@@ -1,0 +1,93 @@
+{
+  "test": "p3_6_hotplug",
+  "started": "2026-11-21T18:28:14",
+  "git": "32d880e",
+  "probe_map_name": "fets",
+  "probe_map": {
+    "ch1": {
+      "location": "PWR J4",
+      "net": "Source2"
+    },
+    "ch2": {
+      "location": "PWR J5",
+      "net": "Source1"
+    },
+    "ch3": {
+      "location": "PWR J2",
+      "net": "Gate1"
+    },
+    "ch4": {
+      "location": "PWR J1",
+      "net": "Gate2"
+    }
+  },
+  "instruments": {
+    "load": "REVB-ELOAD-TEST,0.1.0,Nov 21 2026 05:09:48",
+    "psu": "KORAD KA3005P V1.5 SN:01639604",
+    "scope": "RIGOL TECHNOLOGIES,DHO804,DHO8A285M01767,00.01.05",
+    "ports": {
+      "load": "COM4",
+      "psu": "COM3",
+      "scope": "USB0::0x1AB1::0x044D::DHO8A285M01767::INSTR"
+    }
+  },
+  "session": {
+    "ambient_C": 20.0,
+    "fuse": "10 A blade (schematic: 5 A)",
+    "fan": "none",
+    "heatsink": "isolated from DRAIN, shorted to GND",
+    "ntc": "NTCLE100E3103HT1 on power-board TEMP_IN+ (R19 470R from +12V), epoxy bead on heatsink ~1 mm from one FET; not read by the MCU"
+  },
+  "board_cfg": {
+    "vdda": 3.311,
+    "vref_dmm": 4.093,
+    "isen_v_per_a": 0.25,
+    "isen_zero_counts": 0.0,
+    "ma_per_code": 2.7273,
+    "ntc_installed": false
+  },
+  "note": "USB-C only; TC on Q2 package top",
+  "vpsu": 5.0,
+  "code": 367,
+  "timebases": [
+    5e-05,
+    0.001
+  ],
+  "k_src_V_per_A": 0.0623,
+  "trig_V": 3.95,
+  "results": {
+    "a_hotplug_50us": {
+      "triggered": true,
+      "src1_peak_V": 0.07098995854,
+      "i_peak_est_A": 1.1394856908507223,
+      "i_final_est_A": 0.9381407192504012,
+      "t_peak_us": -57.279999999999994,
+      "gate1_min_V": 3.8244171006162007
+    },
+    "a_hotplug_1000us": {
+      "triggered": true,
+      "src1_peak_V": 0.07894619162919998,
+      "i_peak_est_A": 1.2671940871460672,
+      "i_final_est_A": 0.947278104507223,
+      "t_peak_us": 10835.999999999998,
+      "gate1_min_V": 3.7825768736199
+    },
+    "b_recover_50us": {
+      "triggered": true,
+      "src1_peak_V": 0.0691951180788,
+      "i_peak_est_A": 1.1106760526292134,
+      "i_final_est_A": 0.936420740849117,
+      "t_peak_us": -53.440000000000005,
+      "gate1_min_V": 3.8030535935757004
+    },
+    "b_recover_1000us": {
+      "triggered": true,
+      "src1_peak_V": 0.07558421434739998,
+      "i_peak_est_A": 1.2132297648057782,
+      "i_final_est_A": 0.9399681963017655,
+      "t_peak_us": 6477.999999999998,
+      "gate1_min_V": 3.7825768736199
+    }
+  },
+  "finished": "2026-11-21T18:28:49"
+}

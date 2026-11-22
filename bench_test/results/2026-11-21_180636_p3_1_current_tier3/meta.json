@@ -1,0 +1,90 @@
+{
+  "test": "p3_1_current_tier3",
+  "started": "2026-11-21T18:06:36",
+  "git": "32d880e",
+  "probe_map_name": "fets",
+  "probe_map": {
+    "ch1": {
+      "location": "PWR J4",
+      "net": "Source2"
+    },
+    "ch2": {
+      "location": "PWR J5",
+      "net": "Source1"
+    },
+    "ch3": {
+      "location": "PWR J2",
+      "net": "Gate1"
+    },
+    "ch4": {
+      "location": "PWR J1",
+      "net": "Gate2"
+    }
+  },
+  "instruments": {
+    "load": "REVB-ELOAD-TEST,0.1.0,Nov 21 2026 05:09:48",
+    "psu": "KORAD KA3005P V1.5 SN:01639604",
+    "scope": "RIGOL TECHNOLOGIES,DHO804,DHO8A285M01767,00.01.05",
+    "ports": {
+      "load": "COM4",
+      "psu": "COM3",
+      "scope": "USB0::0x1AB1::0x044D::DHO8A285M01767::INSTR"
+    }
+  },
+  "session": {
+    "ambient_C": 20.0,
+    "fuse": "10 A blade (schematic: 5 A)",
+    "fan": "none",
+    "heatsink": "isolated from DRAIN, shorted to GND",
+    "ntc": "NTCLE100E3103HT1 on power-board TEMP_IN+ (R19 470R from +12V), epoxy bead on heatsink ~1 mm from one FET; not read by the MCU"
+  },
+  "board_cfg": {
+    "vdda": 3.311,
+    "vref_dmm": 4.093,
+    "isen_v_per_a": 0.25,
+    "isen_zero_counts": 0.0,
+    "ma_per_code": 2.7273,
+    "ntc_installed": false
+  },
+  "note": "USB-C only; rerun with gate-saturation stop rule",
+  "tier": 3,
+  "tier_A": 2.0,
+  "cap_code": 734,
+  "psu_v": 3.0,
+  "psu_ilim": 2.2,
+  "codes": [
+    0,
+    37,
+    73,
+    110,
+    147,
+    184,
+    220,
+    257,
+    294,
+    330,
+    367,
+    404,
+    440,
+    477,
+    514,
+    550,
+    587,
+    624,
+    661,
+    697,
+    734
+  ],
+  "ceiling": {
+    "code": 734,
+    "req_A": 2.0018382000000003,
+    "psu_A": 1.85,
+    "gates_saturated": [
+      "G1",
+      "G2"
+    ],
+    "gate1_raw": 4.0416,
+    "gate2_raw": 4.0408
+  },
+  "finished": "2026-11-21T18:07:31"
+}

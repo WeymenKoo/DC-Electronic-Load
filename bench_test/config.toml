@@ -1,0 +1,29 @@
+# Bench configuration. Ports are auto-detected by USB VID:PID when left as "auto".
+[ports]
+load = "auto"      # CH340E on control board J3, VID:PID 1A86:7523
+psu = "auto"       # KA3005P virtual COM, VID:PID 0416:5011
+scope = "auto"     # Rigol DHO804 USBTMC, VID 0x1AB1
+
+[board]
+vdda = 3.311                 # control-board 3V3 (TP4), DMM, Phase 1 USB-only
+vref_dmm = 4.093             # +4.096V (J10), DMM, Phase 1 USB-only
+isen_v_per_a = 0.25          # INA240A2 (gain 50) on 5 mOhm
+isen_zero_counts = 0.0       # ISEN offset at 0 A, from Phase 2 (update it)
+ma_per_code = 2.7273         # requested current per DAC code (finding P5 equation, equal sharing)
+ntc_installed = false        # no NTC on the MCU in this session: OTP and Tj limits are not available
+
+[session]
+ambient_C = 20.0
+fuse = "10 A blade (schematic: 5 A)"
+fan = "none"
+heatsink = "isolated from DRAIN, shorted to GND"
+ntc = "NTCLE100E3103HT1 on power-board TEMP_IN+ (R19 470R from +12V), epoxy bead on heatsink ~1 mm from one FET; not read by the MCU"
+
+[scope_gain]
+# DMM / scope VAVG with all four probes on CTL J10 (4.093 V DMM), run 2026-11-21_173245_p0_probecheck.
+# Raw scope values are logged; report.py multiplies by these. Valid while each probe stays on its channel.
+ch1 = 1.0     # CH1 has an OFFSET error (~-0.11 V at 0.5 V/div, -0.24 V at 2 V/div), not a gain error:
+              # fit slope/intercept for CH1 data; run scope self-cal to fix
+ch2 = 1.0046
+ch3 = 1.0077
+ch4 = 1.0102

@@ -1,0 +1,68 @@
+{
+  "test": "p2_dac_transfer",
+  "started": "2026-11-21T17:39:42",
+  "git": "32d880e",
+  "probe_map_name": "dac",
+  "probe_map": {
+    "ch1": {
+      "location": "CTL J9",
+      "net": "LOAD_CTRL"
+    },
+    "ch2": {
+      "location": "PWR J3",
+      "net": "Control_Voltage"
+    },
+    "ch3": {
+      "location": "PWR J2",
+      "net": "Gate1"
+    },
+    "ch4": {
+      "location": "PWR J1",
+      "net": "Gate2"
+    }
+  },
+  "instruments": {
+    "load": "REVB-ELOAD-TEST,0.1.0,Nov 21 2026 05:09:48",
+    "psu": "KORAD KA3005P V1.5 SN:01639604",
+    "scope": "RIGOL TECHNOLOGIES,DHO804,DHO8A285M01767,00.01.05",
+    "ports": {
+      "load": "COM4",
+      "psu": "COM3",
+      "scope": "USB0::0x1AB1::0x044D::DHO8A285M01767::INSTR"
+    }
+  },
+  "session": {
+    "ambient_C": 20.0,
+    "fuse": "10 A blade (schematic: 5 A)",
+    "fan": "none",
+    "heatsink": "isolated from DRAIN, shorted to GND",
+    "ntc": "NTCLE100E3103HT1 on power-board TEMP_IN+ (R19 470R from +12V), epoxy bead on heatsink ~1 mm from one FET; not read by the MCU"
+  },
+  "board_cfg": {
+    "vdda": 3.3,
+    "isen_v_per_a": 0.25,
+    "isen_zero_counts": 0.0,
+    "ma_per_code": 2.7273,
+    "ntc_installed": false
+  },
+  "note": "",
+  "codes": [
+    0,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000,
+    1100,
+    1200,
+    1300,
+    1400,
+    1467
+  ],
+  "finished": "2026-11-21T17:40:10"
+}

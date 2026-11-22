@@ -1,0 +1,115 @@
+{
+  "test": "p3_4_dropout",
+  "started": "2026-11-21T18:35:45",
+  "git": "32d880e",
+  "probe_map_name": "fets",
+  "probe_map": {
+    "ch1": {
+      "location": "PWR J4",
+      "net": "Source2"
+    },
+    "ch2": {
+      "location": "PWR J5",
+      "net": "Source1"
+    },
+    "ch3": {
+      "location": "PWR J2",
+      "net": "Gate1"
+    },
+    "ch4": {
+      "location": "PWR J1",
+      "net": "Gate2"
+    }
+  },
+  "instruments": {
+    "load": "REVB-ELOAD-TEST,0.1.0,Nov 21 2026 05:09:48",
+    "psu": "KORAD KA3005P V1.5 SN:01639604",
+    "scope": "RIGOL TECHNOLOGIES,DHO804,DHO8A285M01767,00.01.05",
+    "ports": {
+      "load": "COM4",
+      "psu": "COM3",
+      "scope": "USB0::0x1AB1::0x044D::DHO8A285M01767::INSTR"
+    }
+  },
+  "session": {
+    "ambient_C": 20.0,
+    "fuse": "10 A blade (schematic: 5 A)",
+    "fan": "none",
+    "heatsink": "isolated from DRAIN, shorted to GND",
+    "ntc": "NTCLE100E3103HT1 on power-board TEMP_IN+ (R19 470R from +12V), epoxy bead on heatsink ~1 mm from one FET; not read by the MCU"
+  },
+  "board_cfg": {
+    "vdda": 3.311,
+    "vref_dmm": 4.093,
+    "isen_v_per_a": 0.25,
+    "isen_zero_counts": 0.0,
+    "ma_per_code": 2.7273,
+    "ntc_installed": false
+  },
+  "note": "USB-C only; PSU VOUT includes lead drop",
+  "setpoints": {
+    "0.5A": 193,
+    "1.0A": 393,
+    "1.9A": 752
+  },
+  "volts": [
+    3.0,
+    2.9,
+    2.8,
+    2.7,
+    2.6,
+    2.5,
+    2.4,
+    2.3,
+    2.2,
+    2.1,
+    2.0,
+    1.9,
+    1.8,
+    1.7,
+    1.6,
+    1.5,
+    1.4,
+    1.3,
+    1.2,
+    1.1,
+    1.0,
+    0.95,
+    0.9,
+    0.85,
+    0.8,
+    0.75,
+    0.7,
+    0.65,
+    0.6,
+    0.55,
+    0.5,
+    0.45,
+    0.4,
+    0.35,
+    0.3,
+    0.25,
+    0.2,
+    0.15,
+    0.1,
+    0.05
+  ],
+  "summary": {
+    "0.5A": {
+      "dropout_V": 0.2,
+      "i_ref": 0.5,
+      "i_at_dropout": 0.417
+    },
+    "1.0A": {
+      "dropout_V": 0.5,
+      "i_ref": 1.002,
+      "i_at_dropout": 0.958
+    },
+    "1.9A": {
+      "dropout_V": 1.6,
+      "i_ref": 1.893,
+      "i_at_dropout": 1.854
+    }
+  },
+  "finished": "2026-11-21T18:42:23"
+}

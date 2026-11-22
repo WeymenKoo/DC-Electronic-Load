@@ -1,0 +1,80 @@
+SEQ START 20:25:21
+Phase 3.5 step response at 5.0 V, ILIM 2.00 A, tier 4.
+STEP 36 <-> 712 (0.10 <-> 1.94 A requested), half period 50 ms.
+Captures: rising + falling edge at each of [2e-05, 0.0002] s/div. Peak power 8.9 W.
+Probe map 'fets', 20 MHz BW, 16x averaged, trigger Gate1.
+Probe map 'fets' (all grounds on GND / DUT-, probes at 10x):
+[run] G:\Other computers\MBA 1\Documents\Project\01 Hardware\DC Load Box\bench\revb_limit_test\results\2026-11-21_202523_p3_5_step_5V
+rise_20us: captured 10000 pts, Gate1 pp 0.951 V
+fall_20us: captured 10000 pts, Gate1 pp 0.947 V
+rise_200us: captured 10000 pts, Gate1 pp 0.950 V
+fall_200us: captured 10000 pts, Gate1 pp 0.947 V
+[abort] end of test: DAC 0, DISARM, OUT0 sent
+Done: 2026-11-21_202523_p3_5_step_5V
+Phase 3.5 step response at 12.0 V, ILIM 2.00 A, tier 4.
+STEP 36 <-> 712 (0.10 <-> 1.94 A requested), half period 50 ms.
+Captures: rising + falling edge at each of [2e-05, 0.0002] s/div. Peak power 21.4 W.
+Probe map 'fets', 20 MHz BW, 16x averaged, trigger Gate1.
+Probe map 'fets' (all grounds on GND / DUT-, probes at 10x):
+[run] G:\Other computers\MBA 1\Documents\Project\01 Hardware\DC Load Box\bench\revb_limit_test\results\2026-11-21_202551_p3_5_step_12V
+rise_20us: captured 10000 pts, Gate1 pp 0.961 V
+fall_20us: captured 10000 pts, Gate1 pp 0.957 V
+rise_200us: captured 10000 pts, Gate1 pp 0.957 V
+fall_200us: captured 10000 pts, Gate1 pp 0.959 V
+[abort] end of test: DAC 0, DISARM, OUT0 sent
+Done: 2026-11-21_202551_p3_5_step_12V
+THERMAL START 20:26:18
+Phase 3.8 thermal, no fan. Constant 1.5 A (code 592), PSU ILIM 1.8 A.
+Power steps [10.0, 20.0, 30.0] W -> PSU [6.67, 13.33, 20.0] V, 3 min each (fixed). Then a hot ceiling sweep at 3 V
+and 5 min cool-down at ~0.1 A. Total ~14 min.
+OPERATOR: film the DMM (TC on the heatsink next to Q2's tab) with the PSU display in frame.
+Press the PSU OUTPUT button if the heatsink reaches 80 °C or anything smells / smokes.
+Probe map 'fets' (all grounds on GND / DUT-, probes at 10x):
+[run] G:\Other computers\MBA 1\Documents\Project\01 Hardware\DC Load Box\bench\revb_limit_test\results\2026-11-21_202620_p3_8_thermal
+START 20:26:23  (PSU output on, 1.5 A)
+20:26:24    10 W   0.0 min  P 10.00 W  I 1.499 A  gate drop    0.0 mV  slope   nan mV/min  CV/ON
+20:26:40    10 W   0.3 min  P 10.00 W  I 1.499 A  gate drop  -37.6 mV  slope   nan mV/min  CV/ON
+20:26:56    10 W   0.5 min  P 10.00 W  I 1.499 A  gate drop  -39.7 mV  slope -47.96 mV/min  CV/ON
+20:27:12    10 W   0.8 min  P 10.00 W  I 1.499 A  gate drop  -40.6 mV  slope -26.59 mV/min  CV/ON
+20:27:28    10 W   1.1 min  P 10.00 W  I 1.499 A  gate drop  -41.2 mV  slope -17.28 mV/min  CV/ON
+20:27:44    10 W   1.3 min  P 10.00 W  I 1.499 A  gate drop  -41.6 mV  slope -12.33 mV/min  CV/ON
+20:28:00    10 W   1.6 min  P  9.99 W  I 1.498 A  gate drop  -42.4 mV  slope -9.53 mV/min  CV/ON
+20:28:16    10 W   1.9 min  P  9.99 W  I 1.498 A  gate drop  -43.2 mV  slope -7.78 mV/min  CV/ON
+20:28:32    10 W   2.1 min  P  9.99 W  I 1.498 A  gate drop  -43.4 mV  slope -2.99 mV/min  CV/ON
+20:28:48    10 W   2.4 min  P  9.99 W  I 1.498 A  gate drop  -44.3 mV  slope -2.39 mV/min  CV/ON
+20:29:04    10 W   2.7 min  P  9.99 W  I 1.498 A  gate drop  -44.4 mV  slope -2.24 mV/min  CV/ON
+20:29:20    10 W   2.9 min  P  9.99 W  I 1.498 A  gate drop  -45.0 mV  slope -2.17 mV/min  CV/ON
+20:29:27    20 W   0.0 min  P 19.97 W  I 1.498 A  gate drop  -54.7 mV  slope   nan mV/min  CV/ON
+20:29:43    20 W   0.3 min  P 19.97 W  I 1.498 A  gate drop -114.9 mV  slope   nan mV/min  CV/ON
+20:29:59    20 W   0.5 min  P 19.96 W  I 1.497 A  gate drop -118.4 mV  slope -77.86 mV/min  CV/ON
+20:30:15    20 W   0.8 min  P 19.96 W  I 1.497 A  gate drop -120.0 mV  slope -43.76 mV/min  CV/ON
+20:30:31    20 W   1.1 min  P 19.96 W  I 1.497 A  gate drop -121.5 mV  slope -28.93 mV/min  CV/ON
+20:30:47    20 W   1.3 min  P 19.96 W  I 1.497 A  gate drop -122.8 mV  slope -21.13 mV/min  CV/ON
+20:31:03    20 W   1.6 min  P 19.96 W  I 1.497 A  gate drop -124.0 mV  slope -16.55 mV/min  CV/ON
+20:31:19    20 W   1.9 min  P 19.94 W  I 1.496 A  gate drop -124.6 mV  slope -13.53 mV/min  CV/ON
+20:31:35    20 W   2.1 min  P 19.94 W  I 1.496 A  gate drop -125.5 mV  slope -5.80 mV/min  CV/ON
+20:31:51    20 W   2.4 min  P 19.94 W  I 1.496 A  gate drop -126.7 mV  slope -4.47 mV/min  CV/ON
+20:32:07    20 W   2.7 min  P 19.94 W  I 1.496 A  gate drop -128.0 mV  slope -4.09 mV/min  CV/ON
+20:32:23    20 W   2.9 min  P 19.94 W  I 1.496 A  gate drop -128.9 mV  slope -3.85 mV/min  CV/ON
+20:32:30    30 W   0.0 min  P 29.92 W  I 1.496 A  gate drop -145.2 mV  slope   nan mV/min  CV/ON
+20:32:46    30 W   0.3 min  P 29.92 W  I 1.496 A  gate drop -205.9 mV  slope   nan mV/min  CV/ON
+20:33:02    30 W   0.5 min  P 29.92 W  I 1.496 A  gate drop -210.2 mV  slope -82.92 mV/min  CV/ON
+20:33:17    30 W   0.8 min  P 29.90 W  I 1.495 A  gate drop -212.3 mV  slope -47.52 mV/min  CV/ON
+20:33:33    30 W   1.1 min  P 29.90 W  I 1.495 A  gate drop -213.6 mV  slope -31.57 mV/min  CV/ON
+20:33:49    30 W   1.3 min  P 29.90 W  I 1.495 A  gate drop -214.8 mV  slope -23.10 mV/min  CV/ON
+20:34:05    30 W   1.6 min  P 29.88 W  I 1.494 A  gate drop -216.6 mV  slope -18.04 mV/min  CV/ON
+20:34:21    30 W   1.9 min  P 29.88 W  I 1.494 A  gate drop -217.6 mV  slope -14.85 mV/min  CV/ON
+20:34:37    30 W   2.1 min  P 29.88 W  I 1.494 A  gate drop -218.9 mV  slope -6.72 mV/min  CV/ON
+20:34:53    30 W   2.4 min  P 29.88 W  I 1.494 A  gate drop -220.1 mV  slope -5.23 mV/min  CV/ON
+20:35:09    30 W   2.7 min  P 29.88 W  I 1.494 A  gate drop -221.4 mV  slope -4.81 mV/min  CV/ON
+20:35:25    30 W   2.9 min  P 29.88 W  I 1.494 A  gate drop -222.0 mV  slope -4.63 mV/min  CV/ON
+20:36:36  hot ceiling: max 2.039 A
+20:36:38  cool-down  0.0 min
+20:37:41  cool-down  1.1 min
+20:38:43  cool-down  2.1 min
+20:39:46  cool-down  3.2 min
+20:40:48  cool-down  4.2 min
+END 20:41:43
+[abort] end of test: DAC 0, DISARM, OUT0 sent
+Done: 2026-11-21_202620_p3_8_thermal
+SEQ END 20:41:43

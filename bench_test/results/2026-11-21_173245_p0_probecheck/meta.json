@@ -1,0 +1,76 @@
+{
+  "test": "p0_probecheck",
+  "started": "2026-11-21T17:32:45",
+  "git": "32d880e",
+  "probe_map_name": "probecheck",
+  "probe_map": {
+    "ch1": {
+      "location": "CTL J10",
+      "net": "+4.096V"
+    },
+    "ch2": {
+      "location": "CTL J10",
+      "net": "+4.096V"
+    },
+    "ch3": {
+      "location": "CTL J10",
+      "net": "+4.096V"
+    },
+    "ch4": {
+      "location": "CTL J10",
+      "net": "+4.096V"
+    }
+  },
+  "instruments": {
+    "load": "REVB-ELOAD-TEST,0.1.0,Nov 21 2026 05:09:48",
+    "psu": null,
+    "scope": "RIGOL TECHNOLOGIES,DHO804,DHO8A285M01767,00.01.05",
+    "ports": {
+      "load": "COM4",
+      "scope": "USB0::0x1AB1::0x044D::DHO8A285M01767::INSTR"
+    }
+  },
+  "session": {
+    "ambient_C": 20.0,
+    "fuse": "10 A blade (schematic: 5 A)",
+    "fan": "none",
+    "heatsink": "isolated from DRAIN, shorted to GND",
+    "ntc": "NTCLE100E3103HT1 on power-board TEMP_IN+ (R19 470R from +12V), epoxy bead on heatsink ~1 mm from one FET; not read by the MCU"
+  },
+  "board_cfg": {
+    "vdda": 3.3,
+    "isen_v_per_a": 0.25,
+    "isen_zero_counts": 0.0,
+    "ma_per_code": 2.7273,
+    "ntc_installed": false
+  },
+  "note": "",
+  "dmm_V": 4.093,
+  "result": {
+    "ch1": {
+      "vavg": 3.8563,
+      "vpp": 0.097067,
+      "error_pct": -5.783044221842171,
+      "gain": 1.061380079350673
+    },
+    "ch2": {
+      "vavg": 4.0741,
+      "vpp": 0.0944,
+      "error_pct": -0.4617639872953938,
+      "gain": 1.0046390613877914
+    },
+    "ch3": {
+      "vavg": 4.0616,
+      "vpp": 0.1152,
+      "error_pct": -0.7671634497923185,
+      "gain": 1.0077309434705535
+    },
+    "ch4": {
+      "vavg": 4.0515,
+      "vpp": 0.1176,
+      "error_pct": -1.0139262154898576,
+      "gain": 1.0102431198321609
+    }
+  },
+  "finished": "2026-11-21T17:32:51"
+}

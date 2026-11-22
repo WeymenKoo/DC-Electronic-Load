@@ -1,0 +1,7 @@
+id,red,black,reading_mV,range,nominal_mV,note
+M1,R12 source-side end cap,R12 Rshunt-side end cap,50,V (1 mV res),50,0.5 A per FET through R12||R13 (0.1 ohm): resistors correct
+M2,J5,R12 source-side end cap,-1,V (1 mV res),0,source copper negligible
+M3,R12 Rshunt-side end cap,DUT- terminal,11,V (1 mV res),5,
+M4,J5,DUT- terminal,62,V (1 mV res),55,M1+M2+M3 = 60
+M3b,R12 Rshunt-side end cap,DUT- terminal,11.68,mV (0.01 mV res),5,shared return = 11.68 mOhm at 1.0018 A
+M5,R5 end cap,R5 end cap,5.04,mV (0.01 mV res),5,R5 = 5.03 mOhm: shunt correct; copper = 6.6 mOhm
