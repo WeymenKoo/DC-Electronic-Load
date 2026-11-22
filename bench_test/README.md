@@ -12,6 +12,7 @@ is [`REPORT.md`](REPORT.md), and the chronological log is [`results/session_note
 | `bench/report.py`, `report_p33_p34.py`, `thermal_fit.py`, `step_metrics.py` | plots, fits and metrics from the run folders |
 | `results/<date>_<time>_<test>/` | `data.csv`, `meta.json` (instruments, probe map, settings), scope PNGs, `waveforms/*.csv`, plots |
 | `results/_combined/` | plots across runs (current tiers, step response) |
+| `scope_annotated/` | every raw scope screenshot with a title, conditions, channel legend (signal, probe point, scale, offset) and call-outs; `python tools/annotate_scope.py` regenerates them from `tools/scope_labels.py` |
 | `photos/` | bench photos and the GUI screenshot |
 | `config.toml` | ports (auto-detected), board calibration, scope probe gain factors |
 

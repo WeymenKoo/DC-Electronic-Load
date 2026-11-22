@@ -92,6 +92,9 @@ The firmware and GUI are more conservative: 35 W peak, and a thermal cutoff at t
 
 ## Test cases
 
+Scope captures are shown labelled: the raw screenshot with a title, the test conditions, a channel legend (signal, probe point, scale, offset) and call-outs, made by [`annotate_scope.py`](bench_test/tools/annotate_scope.py). The originals stay in each run folder under [`bench_test/results/`](bench_test/results); all 40 labelled captures are in [`bench_test/scope_annotated/`](bench_test/scope_annotated). Each sits next to the Python plot of the same run.
+
+
 ### 1. Current capability: where the load stops (P1)
 **Method:** PSU at 3.0 V, current limit set 0.2 A above each tier. The DAC was swept in 4 tiers (0.5 / 1 / 2 / 3 A
 caps), logging the PSU current, ISEN, both gate voltages and both source voltages, until a gate reached its measured
@@ -134,9 +137,11 @@ V = 0.559 Ω × I.
 **Result:** stable, with no ringing. 0.46 ↔ 1.39 A: 11 to 13 µs (10-90 %), ≤ 1.5 % overshoot. 0.1 ↔ 1.8 A:
 11.6 µs rise, 15.7 µs fall.
 
-| | |
+| Scope: 0.46 → 1.39 A at 5 V (labelled) | Logged data: all four edges at 5 and 12 V |
 |---|---|
-| ![](bench_test/results/_combined/plot_3_5_step_20us.png) | ![](bench_test/results/_combined/plot_3_5_step_36-712_20us.png) |
+| ![Load step 0.46 to 1.39 A, labelled scope capture](bench_test/scope_annotated/182042_p3_5_step_5V__step_rise_20us.png) | ![Step response 0.46 to 1.39 A, Python plot](bench_test/results/_combined/plot_3_5_step_20us.png) |
+| **Scope: 0.1 → 1.8 A at 5 V (labelled)** | **Logged data: the large step** |
+| ![Load step 0.1 to 1.8 A, labelled scope capture](bench_test/scope_annotated/202523_p3_5_step_5V__step_rise_20us.png) | ![Step response 0.1 to 1.8 A, Python plot](bench_test/results/_combined/plot_3_5_step_36-712_20us.png) |
 
 ### 6. Hot plug and current-limit recovery (P7)
 **Method:** load armed at 0.94 A, then (a) PSU output switched off → on, and (b) PSU current limit raised from
@@ -144,9 +149,11 @@ V = 0.559 Ω × I.
 **Result:** the gates do wind up to the rail with no current, but **no current spike** appears: the KA3005P ramps
 over about 1 ms, and the loop tracks it. A stiff source (a battery) was not tested.
 
-| | |
+| Scope: (a) PSU off → on (labelled) | Logged data, same capture |
 |---|---|
-| ![](bench_test/results/2026-11-21_182814_p3_6_hotplug/plot_3_6_a_hotplug_1000us.png) | ![](bench_test/results/2026-11-21_182814_p3_6_hotplug/plot_3_6_b_recover_1000us.png) |
+| ![Hot plug, labelled scope capture](bench_test/scope_annotated/182814_p3_6_hotplug__hotplug_a_hotplug_1000us.png) | ![Hot plug, Python plot](bench_test/results/2026-11-21_182814_p3_6_hotplug/plot_3_6_a_hotplug_1000us.png) |
+| **Scope: (b) current limit 0.5 → 2 A (labelled)** | **Logged data, same capture** |
+| ![Current-limit recovery, labelled scope capture](bench_test/scope_annotated/182814_p3_6_hotplug__hotplug_b_recover_1000us.png) | ![Current-limit recovery, Python plot](bench_test/results/2026-11-21_182814_p3_6_hotplug/plot_3_6_b_recover_1000us.png) |
 
 ### 7. Thermal limit, no fan (P3)
 **Method:** 1.5 A at 10, 20 and 30 W for 3 min each, then a hot ceiling sweep and a cool-down. Thermocouple on the
@@ -162,7 +169,9 @@ heatsink ≈ 3.9 K/W per FET. **≈ 36 W continuous** for Tj ≤ 125 °C. The ce
 + input. Swapping R1 and R4 would give 0.1 × V_DUT. The latched output also holds the MCU's ADC pin above its
 3.6 V absolute maximum.
 
-![](bench_test/results/2026-11-21_185734_p3_7_vsen/plot_3_7_vsen.png)
+| Scope: DUT at 20 V (labelled) | Logged data, 0 → 20 V and back |
+|---|---|
+| ![VSEN stuck at 3.96 V, labelled scope capture](bench_test/scope_annotated/185734_p3_7_vsen__vsen_up_20V.png) | ![VSEN against DUT voltage, Python plot](bench_test/results/2026-11-21_185734_p3_7_vsen/plot_3_7_vsen.png) |
 
 ### 9. Reference and rails
 **Result:** the 4.096 V reference reads 4.093 V on USB power (3 mV low) and moves only +1.7 mV/A under load.
@@ -172,6 +181,8 @@ The DAC chain is 1.003 mV/code, with a divider ratio of 0.151 (0.150 designed). 
 | | |
 |---|---|
 | ![](bench_test/results/2026-11-21_185831_p3_9_ref/plot_3_9_reference.png) | ![](bench_test/results/2026-11-21_173942_p2_dac_transfer/plot_dac_transfer.png) |
+| **Scope: rails on USB power (labelled)** | **Scope: DAC chain at code 1467, gates at the 4.094 V ceiling (labelled)** |
+| ![Control-board rails on USB power, labelled scope capture](bench_test/scope_annotated/172940_p1_rails_usb_only__rails_usb_only_dc.png) | ![DAC chain at code 1467, labelled scope capture](bench_test/scope_annotated/173942_p2_dac_transfer__dac_1467.png) |
 
 ## Findings
 
