@@ -12,7 +12,7 @@ USB-C, with a Windows/macOS GUI.
 | Hardware (Altium schematics, PCB, gerbers, BOM, netlists) | [`hardware/`](hardware/README.md) |
 | Firmware (STM32, safety ceilings from these measurements) | [`firmware/`](firmware/README.md) |
 | Control GUI (Windows, macOS) | [`gui/`](gui/README.md) |
-| Bench-test automation, raw data, full report | [`bench_test/`](bench_test/README.md), [`REPORT.md`](bench_test/REPORT.md) |
+| Bench report, raw data, instrument drivers | [`bench_test/`](bench_test/README.md) |
 | Plan for the next board | [`RevB/`](RevB/README.md) |
 
 ## The circuit
@@ -92,7 +92,7 @@ The firmware and GUI are more conservative: 35 W peak, and a thermal cutoff at t
 
 ## Test cases
 
-Scope captures are shown labelled: the raw screenshot with a title, the test conditions, a channel legend (signal, probe point, scale, offset) and call-outs, made by [`annotate_scope.py`](bench_test/tools/annotate_scope.py). The originals stay in each run folder under [`bench_test/results/`](bench_test/results); all 40 labelled captures are in [`bench_test/scope_annotated/`](bench_test/scope_annotated). Each sits next to the Python plot of the same run.
+Scope captures are shown labelled: the raw screenshot with a title, the test conditions, a channel legend (signal, probe point, scale, offset) and call-outs. The originals stay in each run folder under [`bench_test/results/`](bench_test/results); all 40 labelled captures are in [`bench_test/scope_annotated/`](bench_test/scope_annotated). Each sits next to the Python plot of the same run.
 
 
 ### 1. Current capability: where the load stops (P1)

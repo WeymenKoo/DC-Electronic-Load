@@ -32,4 +32,4 @@ Nothing here is built yet.
 | **N4** 4.096 V reference 3 mV low on USB power | DAC/ADC with their own references, supplied from a regulated rail |
 | Hot plug from a stiff source (untested) | Covered by the dropout anti-wind-up; test with a battery on Rev B |
 
-Measured Rev A numbers behind each row: [`../bench_test/REPORT.md`](../bench_test/REPORT.md).
+Measured Rev A numbers behind each row: [`../bench_test/`](../bench_test/README.md).

@@ -1,7 +1,7 @@
 # Rev A DC load: control GUI
 
 Minimal Tkinter + pyserial app to run the Rev A load from Windows or macOS, with the limits measured on the bench
-(2026-11-21, see [`../bench_test/REPORT.md`](../bench_test/REPORT.md)). Works with the SAFE firmware (`../firmware`), which enforces the same limits in the load itself.
+(2026-11-21, see [`../bench_test/`](../bench_test/README.md)). Works with the SAFE firmware (`../firmware`), which enforces the same limits in the load itself.
 
 | Start | |
 |---|---|
